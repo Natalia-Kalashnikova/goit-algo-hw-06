@@ -1,3 +1,5 @@
+"""This script demonstrates usage of the AddressBook and Record classes to manage contact data."""
+
 from models.record import Record
 from book.addressbook import AddressBook
 

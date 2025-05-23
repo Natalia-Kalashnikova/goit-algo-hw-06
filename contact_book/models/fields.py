@@ -1,5 +1,7 @@
+"""This module defines the Field base class and specific field types such as Name and Phone."""
+
 class Field:
-    # Base class for all fields (e.g. name, phone)
+    """ Base class for all fields (e.g. name, phone)"""
     def __init__(self, value):
         self.value = value  # Store raw field value
 
@@ -8,7 +10,7 @@ class Field:
 
 
 class Name(Field):
-    # Represents the name of a contact (mandatory field)
+    """ Represents the name of a contact (mandatory field) """
     def __init__(self, value):
         if not value:
             raise ValueError("Name cannot be empty.")
@@ -16,9 +18,9 @@ class Name(Field):
 
 
 class Phone(Field):
-    # Represents a phone number with validation
+    """ Represents a phone number with validation """
     def __init__(self, value):
         if not value.isdigit() or len(value) != 10:
             # Validate that phone number is exactly 10 digits
             raise ValueError("Phone number must be exactly 10 digits.")
-        super().__init__(value)  # Initialize the base class
+        super().__init__(value)# Initialize the base class
