@@ -11,7 +11,6 @@ john_record = Record("John")
 john_record.add_phone("1234567890")
 john_record.add_phone("5555555555")
 
-
 # Add John's record to the address book
 book.add_record(john_record)
 
